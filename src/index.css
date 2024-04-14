@@ -1,0 +1,163 @@
+.topweb {
+    background-image: url(./imgs//mainbg.jpg);
+    height: 100vh;
+    background-size: contain;
+    backdrop-filter:unset;
+    background-clip: padding-box;
+    color: white !important;
+    position: relative;
+}
+.topweb::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.623);
+}
+.searchcont {
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%)  ;
+    width: 35%;
+    box-shadow: 0px 0px 15px -10px white;
+    
+}
+.searchcont:hover {
+    transition: .2s;
+    box-shadow: 0px 0px 20px -10px white;
+}
+.searchcont input:focus {
+    outline: none;
+}
+.searchcont input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    color: white;
+    font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    opacity: .7;
+}
+@media(max-width:700px) {
+    .searchcont {
+        width: 90%;
+
+    }
+}
+h3 {
+    text-align: center;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 100px;
+}
+
+.contresults {
+    background-image: url(./imgs/secondbg.jpg);
+    background-size: contain;
+    color: white !important;
+    z-index: -10;
+    height:min-content;
+}
+
+
+.bookcont img {
+    cursor: pointer !important;
+    max-width: 80%;
+    box-shadow: 0px 0px 20px -10px white;
+}
+.texttres {
+    padding-top: 10% ;
+    margin-bottom: 5%;
+    text-align: center;
+    text-align: center;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.bookcont {
+    text-align: center  ;
+}
+
+.bookdetalis {
+    background-image: url(./imgs/3bg.jpg);
+    height:100vh;
+    padding: 20px;
+    background-size: contain;
+    background-clip: padding-box;
+    /* z-index: 100; */
+}
+
+.bookdetalis a {
+    position: absolute;
+    z-index: 100;
+}
+
+.bookdetalis::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contbookdetails {
+    display: flex;
+    align-items: center;
+    width: 75%;
+
+}
+
+
+.bookcont {
+    border-radius: 10px;
+    margin: 20px 20px;
+    background-color: rgba(255, 255, 255, 0.783);
+    color: black;
+    margin: 20 auto;
+    transform: translateX(30%);
+}
+
+.bookscont {
+    text-align: center;
+}
+
+
+@media(max-width:800px) {
+    .contbookdetails {
+        width: 100% !important;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .bookdetalis {
+        height: max-content;
+    }
+
+    .bookdetalis::before {
+        height: 155%;
+    }
+
+    .bookcont {
+        margin: 20px 0;
+        transform: translateX(0);
+    }
+    .bookdetalis img {
+        margin-top: 100px;
+    }
+}
